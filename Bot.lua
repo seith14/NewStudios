@@ -3,8 +3,8 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
 	console.log('I am ready!');
-	const channel = Client:getChannel('459817720150491149');
-  channel:send('Bot Activated/Updated');
+	const channel = Client.getChannel('459817720150491149');
+  channel.send('Bot Activated/Updated');
 });
 
 client.on('message', message => {
