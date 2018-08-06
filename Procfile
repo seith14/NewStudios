@@ -1,1 +1,1 @@
-worker: node Bot.lua
+worker: node Bot.js
