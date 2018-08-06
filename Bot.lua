@@ -8,8 +8,8 @@ const maxwarns = 4
 const warns = {}
 
 Client:on('messageCreate', function(msg)
-	local channel = Client:getChannel('459817720150491149')
-	local stuff = msg.content
+	const channel = Client:getChannel('459817720150491149')
+	const stuff = msg.content
 	print(msg.author.id)
 	if msg.member.highestRole.name >= "Co-Owner" then
 	if stuff:sub(1,#pr+4) == pr.."warn" then
@@ -32,7 +32,7 @@ Client:on('messageCreate', function(msg)
 	end
 		elseif stuff:sub(1,#pr+4) == pr.."kick" then
 			for _, i in pairs(Client.users) do
-			local checked = checker(msg, stuff, i)
+			const checked = checker(msg, stuff, i)
 			if checked then
 				local mem = msg.guild:getMember(i.id)
 				mem.guild:kickUser(mem.user, "Behavior")
