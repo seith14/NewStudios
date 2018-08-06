@@ -66,4 +66,4 @@ end
 	print(#Client.users)
 end)
 
-Client:run("Bot NDYwOTkzNjk0NTI3NjUxODQy.DhNZ6A.679IZl1xHrmO394p0bJZVzC2Qnc")
+Client:run("Bot ZSjv4Q7uUdyv6VHNDyMnLWvG1gXgHhna")
