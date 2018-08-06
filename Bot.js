@@ -1,6 +1,6 @@
-const Discord = require('discordia');
+const Discord = require('Discordia');
 const client = new Discord.Client();
-local discordiaModule = require('discordia')
+local discordiaModule = require('Discordia')
 local Client = discordiaModule.Client()
 local pr = "!"
 local start = false
