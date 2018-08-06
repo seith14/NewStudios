@@ -2,9 +2,9 @@
   "name": "Test",
   "description": "Test",
   "version": "0.0.0",
-  "main": "bot",
+  "main": "Bot.lua",
   "scripts": {
-    "start": "node bot"
+    "start": "node Bot.lua"
   },
   "dependencies": {
     "discord.js": "11.1.0",
