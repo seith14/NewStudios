@@ -1,4 +1,3 @@
-local client = new Discord.Client()
 local discordiaModule = require('discordia')
 local Client = discordiaModule.Client()
 local pr = "!"
