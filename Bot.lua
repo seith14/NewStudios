@@ -1,13 +1,13 @@
 const discordiaModule = require('discordia')
 const lua = require('lua')
 const Client = discordiaModule.Client()
-local pr = "!"
-local start = false
-local maxwarns = 4
-local warns = {}
+const pr = "!"
+const start = false
+const maxwarns = 4
+const warns = {}
 
 Client:on('ready', function()
-	local channel = Client:getChannel('459817720150491149')
+	const channel = Client:getChannel('459817720150491149')
   channel:send('Bot Updated')
 end)
 
@@ -20,9 +20,9 @@ Client:on('memberLeave', function (mem)
 end)
 
 function checker(msg, stuff, i)
-	local plr = stuff:sub(#pr+6, #stuff)
+	const plr = stuff:sub(#pr+6, #stuff)
 			print(i.id)
-		local memb = msg.guild:getMember(i.id)
+		const memb = msg.guild:getMember(i.id)
 		if i.name:sub(1, #plr) == plr and msg.member.highestRole.name > memb.highestRole.name then
 			return true
 		end
@@ -30,13 +30,13 @@ end
 
 
 Client:on('messageCreate', function(msg)
-	local channel = Client:getChannel('459817720150491149')
-	local stuff = msg.content
+	const channel = Client:getChannel('459817720150491149')
+	const stuff = msg.content
 	print(msg.author.id)
 	if msg.member.highestRole.name >= "Co-Owner" then
 	if stuff:sub(1,#pr+4) == pr.."warn" then
 		for _, i in pairs(Client.users) do
-		local checked = checker(msg, stuff, i)
+		const checked = checker(msg, stuff, i)
 		if checked then
 		table.insert(warns, i.name)
 			local amm = maxwarns
@@ -54,7 +54,7 @@ Client:on('messageCreate', function(msg)
 	end
 		elseif stuff:sub(1,#pr+4) == pr.."kick" then
 			for _, i in pairs(Client.users) do
-			local checked = checker(msg, stuff, i)
+			const checked = checker(msg, stuff, i)
 			if checked then
 				local mem = msg.guild:getMember(i.id)
 				mem.guild:kickUser(mem.user, "Behavior")
