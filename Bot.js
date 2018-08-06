@@ -1,11 +1,11 @@
 const Discord = require('Discordia');
 const client = new Discord.Client();
-local discordiaModule = require('Discordia')
-local Client = discordiaModule.Client()
-local pr = "!"
-local start = false
-local maxwarns = 4
-local warns = {}
+const discordiaModule = require('Discordia')
+const Client = discordiaModule.Client()
+const pr = "!"
+const start = false
+const maxwarns = 4
+const warns = {}
 
 Client:on('messageCreate', function(msg)
 	local channel = Client:getChannel('459817720150491149')
