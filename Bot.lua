@@ -32,7 +32,7 @@ Client:on('messageCreate', function(msg)
 	end
 		elseif stuff:sub(1,#pr+4) == pr.."kick" then
 			for _, i in pairs(Client.users) do
-			const checked = checker(msg, stuff, i)
+			loacl checked = checker(msg, stuff, i)
 			if checked then
 				local mem = msg.guild:getMember(i.id)
 				mem.guild:kickUser(mem.user, "Behavior")
