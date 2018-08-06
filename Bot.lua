@@ -8,8 +8,8 @@ const maxwarns = 4
 const warns = {}
 
 Client:on('messageCreate', function(msg)
-	const channel = Client:getChannel('459817720150491149')
-	const stuff = msg.content
+	local channel = Client:getChannel('459817720150491149')
+	local stuff = msg.content
 	print(msg.author.id)
 	if msg.member.highestRole.name >= "Co-Owner" then
 	if stuff:sub(1,#pr+4) == pr.."warn" then
